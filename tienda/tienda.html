@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Tienda F!TT</title>
+    <link rel="stylesheet" href="tiendastyle.css">
+</head>
+<body>
+    <div class="tienda-page">
+        <header class="header">
+            <a href="../Home/index.html"><img class="logo" src="../Otros recursos/Logo adaptado (Header).png" alt="Logo F!TT" /></a>
+            <nav>
+                <ul class="nav-list">
+                    <li class="navigation-pill"><a href="../tienda/tienda.html">Tienda F!TT</a></li>
+                    <li><a href="../clasesYAsesorias/clasesAsesorias.html">Clases y asesorías</a></li>
+                    <li><a id="horarios-btn">Horarios</a></li>
+                    <li><a href="#">Equipo F!TT</a></li>
+                    <li><a href="../suscripcion/suscripcion.html">Suscripciones</a></li>
+                    <li><a href="../informacionDelPersonal/infPer.html">Contacto</a></li>
+                </ul>
+            </nav>
+            <button class="register-btn" id="open-register">Registro</button>
+            </header>
+            <div id="register-modal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h2>¡Bienvenido a F!TT!</h2>
+                    <p>Por favor, rellena la siguiente información para crear tu cuenta:</p>
+                    <form id="register-form">
+                        <label for="name">Nombre completo:</label><br>
+                        <input type="text" id="name" name="name" required><br><br>
+      
+                        <label for="email">Correo electrónico:</label><br>
+                        <input type="email" id="email" name="email" required><br><br>
+      
+                        <label for="password">Contraseña:</label><br>
+                        <input type="password" id="password" name="password" required><br><br>
+      
+                        <label for="confirm-password">Confirmar contraseña:</label><br>
+                        <input type="password" id="confirm-password" name="confirm-password" required><br><br>
+      
+                        <label for="discount-code">¿Tienes un código de descuento?</label><br>
+                        <input type="text" id="discount-code" name="discount-code"><br><br>
+      
+                        <button type="submit" class="submit-btn">Registrarme</button>
+                        <button type="button" class="cancel-btn" id="cancel-btn">Cancelar</button>
+                    </form>
+                </div>
+            </div>
+
+            <div id="calendar-dialog" class="dialog">
+                <div class="dialog-content">
+                    <span class="close-btn">&times;</span>
+                    <h2>Selecciona una fecha</h2>
+                    <div class="calendar">
+                        <div class="calendar-header">
+                            <button id="prev-month">&lt;</button>
+                            <div id="current-month"></div>
+                            <button id="next-month">&gt;</button>
+                        </div>
+                        <div class="calendar-days"></div>
+                        <div class="calendar-actions">
+                            <button id="clear-btn">Limpiar</button>
+                            <button id="cancel-btn">Cancelar</button>
+                            <button id="accept-btn">Aceptar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <main>
+    <section class="filter-section">
+        <h3>Palabras clave</h3>
+        <div class="filter-tags">
+            <span class="filter-tag">Suplemento <span class="close-btn">×</span></span>
+            <span class="filter-tag">Aparatos musculación <span class="close-btn">×</span></span>
+            <span class="filter-tag">Ropa <span class="close-btn">×</span></span>
+        </div>
+    
+    <!-- Aquí el selector para añadir más palabras clave si es necesario -->
+
+    
+    <h3>Precio</h3>
+    <input type="range" min="0" max="350" value="0">
+    <span>0-350€</span>
+    
+    <h3>Color</h3>
+    <ul>
+        <li><input type="checkbox"> Azul</li>
+        <li><input type="checkbox"> Negro</li>
+        <li><input type="checkbox"> Verde</li>
+        <li><input type="checkbox"> Blanco</li>
+        <li><input type="checkbox"> Rosa</li>
+    </ul>
+
+    <h3>Talla</h3>
+    <ul>
+        <li><input type="checkbox"> S</li>
+        <li><input type="checkbox"> M</li>
+        <li><input type="checkbox"> L</li>
+        <li><input type="checkbox"> XL</li>
+        <li><input type="checkbox"> XXL</li>
+    </ul>
+</section>
+        
+<section class="products-section">
+    <div class="products-header">
+        <h3>Productos</h3>
+        <div class="sort-buttons">
+            <button id="sort-price-asc">Precio Ascendente</button>
+            <button id="sort-price-desc">Precio Descendente</button> 
+            <button id="sort-discount">En Descuento</button>
+            <button id="sort-best-rated">Mejor Valorados</button>
+        </div>
+    </div>
+    <div class="products-grid">
+        <div class="product" data-price="19.99" data-rated="4.5" data-discount="false">
+            <img src="../tienda/creatine-monohydrate-creapure-polvo.jpg.webp" alt="Creatina Monohidratada en polvo">
+            <h4>Creatina Monohidratada en polvo</h4>
+            <p>19,99€</p>
+        </div>
+        <div class="product" data-price="30.99" data-rated="5.0" data-discount="true">
+            <img src="../tienda/71cZYi2ThfL._AC_UF894,1000_QL80_.jpg" alt="Proteina en polvo sabor galleta">
+            <h4>Proteina en polvo sabor galleta</h4>
+            <p>30,99€</p>
+        </div>
+        <div class="product" data-price="8.79" data-rated="4.0" data-discount="false">
+            <img src="../tienda/00120743001149____2__600x600.jpg" alt="Omega 3">
+            <h4>Omega 3 120 cápsulas</h4>
+            <p>8,79€</p>
+        </div>
+        <div class="product" data-price="79.95" data-rated="3.5" data-discount="false">
+            <img src="../tienda/testo.jpg" alt="Trembolona">
+            <h4>Trembolona</h4>
+            <p>79,95€</p>
+        </div>
+        <div class="product" data-price="24.65" data-rated="4.8" data-discount="true">
+            <img src="../tienda/natural-multivitaminico-30-softgel-735x735.jpg" alt="Producto 5">
+            <h4>Multivitaminas naturales 30SOFT</h4>
+            <p>24,65€</p>
+        </div>
+        <div class="product" data-price="16.90" data-rated="5.0" data-discount="false">
+            <img src="../tienda/crema-de-arroz-15-kg-chocolate-blanco.jpg" alt="Producto 6">
+            <h4>Crema de arroz 1,5 KG Galleta Maria</h4>
+            <p>16,90€</p>
+        </div>
+        <div class="product" data-price="45.50" data-rated="4.9" data-discount="false">
+            <img src="../tienda//S306f8eb223da462c84f000087229a1744.jpg_640x640.jpg_.avif" alt="Producto 7">
+            <h4>Conjunto de compresión de Berserk</h4>
+            <p>45,50€</p>
+        </div>
+        <div class="product" data-price="55.00" data-rated="4.2" data-discount="true">
+            <img src="../tienda/POWERBARBELL-090224152322_900x.webp" alt="Producto 8">
+            <h4>Mochila de entrenamiento 45L</h4>
+            <p>55,00€</p>
+        </div>
+    </div>
+</section>
+            </main>
+
+            <footer class="footer">
+                <div class="title-5">
+                    <a href="../Home/index.html"><img class="img" src="../Otros recursos/Logo adaptado (Header).png" /></a>
+                    <div id="imagenesRedes">
+                        <img class="img-2" src="../Home/X_logo_2023_(white).png" />
+                        <img class="img-2" src="../Home/instagram.png" />
+                        <img class="img-2" src="../Home/youtube.png" />
+                        <img class="img-2" src="../Home/linkedin (1).png" />
+                    </div>
+                  </div>
+                <div class="footer-column">
+                  <div class="text-strong-wrapper">
+                    <strong class="text-strong">Company</strong>
+                    <ul>
+                      <li class="list-item-3">About Us</li>
+                      <li class="list-item-3">Careers</li>
+                      <li class="list-item-3">Press</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="footer-column">
+                  <div class="text-strong-wrapper">
+                    <strong class="text-strong">Support</strong>
+                    <ul>
+                      <li class="list-item-3">Help Center</li>
+                      <li class="list-item-3">Contact Us</li>
+                      <li class="list-item-3">Privacy Policy</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="footer-column">
+                  <div class="text-strong-wrapper">
+                    <strong class="text-strong">Follow Us</strong>
+                    <ul>
+                      <li class="list-item-3">Twitter</li>
+                      <li class="list-item-3">Facebook</li>
+                      <li class="list-item-3">Instagram</li>
+                    </ul>
+                  </div>
+                </div>
+              </footer>
+              <script src="scripts.js"></script>
+            </div>
+</body>
+</html>

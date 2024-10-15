@@ -1,0 +1,226 @@
+    <!DOCTYPE html>
+    <html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>F!TT - Plataforma de Fitness Online</title>
+        <link rel="stylesheet" href="home.css" />
+    </head>
+    <body>
+        <div class="home-page">
+        <header class="header">
+        <a href="../Home/index.html"><img class="logo" src="../Otros recursos/Logo adaptado (Header).png" alt="Logo F!TT" /></a>
+        <nav>
+            <ul class="nav-list">
+                <li class="navigation-pill"><a href="../tienda/tienda.html">Tienda F!TT</a></li>
+                <li><a href="../clasesYAsesorias/clasesAsesorias.html">Clases y asesorías</a></li>
+                <li><a id="horarios-btn">Horarios</a></li>
+                <li><a href="#">Equipo F!TT</a></li>
+                <li><a href="../suscripcion/suscripcion.html">Suscripciones</a></li>
+                <li><a href="../informacionDelPersonal/infPer.html">Contacto</a></li>
+            </ul>
+        </nav>
+        <button class="register-btn" id="open-register">Registro</button>
+        </header>
+        <div id="register-modal" class="modal">
+          <div class="modal-content">
+              <span class="close">&times;</span>
+              <h2>¡Bienvenido a F!TT!</h2>
+              <p>Por favor, rellena la siguiente información para crear tu cuenta:</p>
+              <form id="register-form">
+                  <label for="name">Nombre completo:</label><br>
+                  <input type="text" id="name" name="name" required><br><br>
+
+                  <label for="email">Correo electrónico:</label><br>
+                  <input type="email" id="email" name="email" required><br><br>
+
+                  <label for="password">Contraseña:</label><br>
+                  <input type="password" id="password" name="password" required><br><br>
+
+                  <label for="confirm-password">Confirmar contraseña:</label><br>
+                  <input type="password" id="confirm-password" name="confirm-password" required><br><br>
+
+                  <label for="discount-code">¿Tienes un código de descuento?</label><br>
+                  <input type="text" id="discount-code" name="discount-code"><br><br>
+
+                  <button type="submit" class="submit-btn">Registrarme</button>
+                  <button type="button" class="cancel-btn" id="cancel-btn">Cancelar</button>
+              </form>
+          </div>
+      </div>
+      <div id="calendar-dialog" class="dialog">
+        <div class="dialog-content">
+            <span class="close-btn">&times;</span>
+            <h2>Selecciona una fecha</h2>
+            <div class="calendar">
+                <div class="calendar-header">
+                    <button id="prev-month">&lt;</button>
+                    <div id="current-month"></div>
+                    <button id="next-month">&gt;</button>
+                </div>
+                <div class="calendar-days"></div>
+                <div class="calendar-actions">
+                    <button id="clear-btn">Limpiar</button>
+                    <button id="cancel-btn">Cancelar</button>
+                    <button id="accept-btn">Aceptar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <section class="hero">
+        <div class="hero-image-placeholder">
+            <img src="../Home/nuevaImg.jpg" alt="Hero Image" />
+            <img src="../Home/nuevaMejorImg.jpg" alt="otra img" />
+        </div>
+        </section>
+
+        <section class="pricing-section">
+        <h2 class="section-title">Nuestros Planes</h2>
+        <div class="pricing-cards">
+            <!-- Comfort Plan -->
+            <div class="pricing-card">
+            <h3>Comfort</h3>
+            <div class="price">€29 / mes</div>
+            <li class="features">
+                <li>Asesoramiento adaptado</li>
+                <li>Acceso a clases grabadas</li>
+                <li>1 clase online semanal</li>
+                <li>Rutina basic</li>
+                <li>5% descuento en tienda</li>
+            </li>
+            <a href="../suscripcion/suscripcion.html"><button class="info-btn">Más información</button></a>
+            </div>
+            <!-- Premium Plan -->
+            <div class="pricing-card premium-card">
+            <h3>Premium</h3>
+            <div class="price">€49 / mes</div>
+            <li class="features">
+                <li>2 asesorías privadas al mes</li>
+                <li>Acceso a clases grabadas</li>
+                <li>3 clases online semanales</li>
+                <li>Rutinas adaptadas</li>
+                <li>10% descuento en tienda</li>
+            </li>
+            <a href="../suscripcion/suscripcion.html"><button class="info-btn2">Más información</button></a>
+            </div>
+            <!-- F!TT Pro Plan -->
+            <div class="pricing-card">
+            <h3>F!TT Pro</h3>
+            <div class="price">€79 / mes</div>
+            <div>
+            <li class="features">
+                <li>Asesorías ilimitadas</li>
+                <li>Acceso ilimitado a clases online</li>
+                <li>Rutina completa</li>
+                <li>15% descuento en tienda</li>
+            </li>
+            </div>
+            <a href="../suscripcion/suscripcion.html"><button class="info-btn">Más información</button></a>
+            </div>
+        </div>
+        </section>
+        <section class="reviews-section">
+        <h2 class="section-title">Nuestras Últimas Reviews</h2>
+        <div class="review-cards">
+            <div class="review-card">
+            <div class="rating">
+                <img src="../Otros recursos/9T46aLRXc.png" alt="Estrella" />
+                <img src="../Otros recursos/9T46aLRXc.png" alt="Estrella" />
+                <img src="../Otros recursos/9T46aLRXc.png" alt="Estrella" />
+                <img src="../Otros recursos/9T46aLRXc.png" alt="Estrella" />
+                <img src="../Otros recursos/the-simple-twinkling-star-free-png.webp" alt="Estrella" />
+            </div>
+            <h3>Nombre de usuario</h3>
+            <p>Hace 13 horas</p>
+            <p>Descripción de la reseña aquí...</p>
+            </div>
+            <!-- Otra Review -->
+            <div class="review-card">
+            <div class="rating">
+              <img src="../Otros recursos/9T46aLRXc.png" alt="Estrella" />
+              <img src="../Otros recursos/9T46aLRXc.png" alt="Estrella" />
+              <img src="../Otros recursos/9T46aLRXc.png" alt="Estrella" />
+              <img src="../Otros recursos/9T46aLRXc.png" alt="Estrella" />
+              <img src="../Otros recursos/9T46aLRXc.png" alt="Estrella" />
+            </div>
+            <h3>Nombre de usuario</h3>
+            <p>Hace 5 días</p>
+            <p>Descripción de la reseña aquí...</p>
+            </div>
+            <div class="review-card">
+                <div class="rating">
+                  <img src="../Otros recursos/9T46aLRXc.png" alt="Estrella" />
+                  <img src="../Otros recursos/9T46aLRXc.png" alt="Estrella" />
+                  <img src="../Otros recursos/9T46aLRXc.png" alt="Estrella" />
+                  <img src="../Otros recursos/9T46aLRXc.png" alt="Estrella" />
+                  <img src="../Otros recursos/the-simple-twinkling-star-free-png.webp" alt="Estrella" />
+                </div>
+                <h3>Nombre de usuario</h3>
+                <p>Hace 7 días</p>
+                <p>Descripción de la reseña aquí...</p>
+            </div>
+        </div>
+        </section>
+
+        <section class="team-section">
+        <div class="team-image">
+            <img src="../Otros recursos/equipoFeliz.avif" alt="Equipo F!TT" />
+        </div>
+        <div class="team-description">
+            <h2>Equipo F!TT</h2>
+            <p>Excepteur efficient emerging, minim veniam anim aute carefully curated Ginza conversation exquisite
+              perfect nostrud nisi intricate Content. Qui&nbsp;&nbsp;international first-class nulla ut. Punctual
+              adipisicing, essential lovely queen tempor eiusmod irure. Exclusive izakaya charming Scandinavian
+              impeccable aute quality of life soft power pariatur Melbourne occaecat discerning. Qui wardrobe aliquip,
+              et Porter destination Toto remarkable officia Helsinki excepteur Basset hound. Zürich sleepy perfect
+              consectetur.</p>
+        </div>
+        </section>
+    
+        <footer class="footer">
+            <div class="title-5">
+                <a href="../Home/index.html"><img class="img" src="../Otros recursos/Logo adaptado (Header).png" /></a>
+                <div id="imagenesRedes">
+                    <img class="img-2" src="../Home/X_logo_2023_(white).png" />
+                    <img class="img-2" src="../Home/instagram.png" />
+                    <img class="img-2" src="../Home/youtube.png" />
+                    <img class="img-2" src="../Home/linkedin (1).png" />
+                </div>
+              </div>
+            <div class="footer-column">
+              <div class="text-strong-wrapper">
+                <strong class="text-strong">Company</strong>
+                <ul>
+                  <li class="list-item-3">About Us</li>
+                  <li class="list-item-3">Careers</li>
+                  <li class="list-item-3">Press</li>
+                </ul>
+              </div>
+            </div>
+            <div class="footer-column">
+              <div class="text-strong-wrapper">
+                <strong class="text-strong">Support</strong>
+                <ul>
+                  <li class="list-item-3">Help Center</li>
+                  <li class="list-item-3">Contact Us</li>
+                  <li class="list-item-3">Privacy Policy</li>
+                </ul>
+              </div>
+            </div>
+            <div class="footer-column">
+              <div class="text-strong-wrapper">
+                <strong class="text-strong">Follow Us</strong>
+                <ul>
+                  <li class="list-item-3">Twitter</li>
+                  <li class="list-item-3">Facebook</li>
+                  <li class="list-item-3">Instagram</li>
+                </ul>
+              </div>
+            </div>
+          </footer>
+          <script src="scripts.js"></script>
+        </div>
+    </body>
+    </html>
